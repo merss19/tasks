@@ -1,0 +1,44 @@
+<md-sidenav layout="column" md-theme="main"  md-is-locked-open="true" class="dashboard-page__sidenav sidenav">
+
+  <md-card class="sidenav__card" >
+    <md-card-header layout="row" layout-align="center center">
+
+      <md-card-avatar class="sidenav__avatar">
+        <div>
+          <img ng-src="src/assets/img/user.png" class="md-user-avatar" alt="">
+        </div>
+      </md-card-avatar>
+
+      <md-card-header-text>
+        <span class="md-title">Trevor Reyes</span>
+      </md-card-header-text>
+
+    </md-card-header>
+
+  </md-card>
+
+  <md-list-item class="btns-group__item btns-group__item_type_add">
+
+    <md-button ng-click="vm.newProject()" class="btns-group__btn md-raised md-primary">
+      <span class="btns-group__name">Project</span>
+      <span class="btns-group__value">+</span>
+    </md-button>
+
+  </md-list-item>
+
+
+  <md-list ng-repeat = "project in vm.projects" class="sidenav__btns btns-group">
+
+    <md-list-item class="btns-group__item">
+
+      <md-button class="btns-group__btn md-raised md-primary">
+        <span class="btns-group__name">{{project.title}}</span>
+        <span class="btns-group__value">{{project.task_count}}</span>
+      </md-button>
+
+    </md-list-item>
+
+  </md-list>
+
+</md-sidenav>
+

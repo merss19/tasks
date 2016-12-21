@@ -1,0 +1,70 @@
+
+	<side-left projects = "vm.projects" new-project="vm.newProject()" layout="row"></side-left>
+
+	<div layout="column">
+
+		<md-list ng-repeat = "task in vm.tasks" class="sidenav__btns btns-group">
+
+			<md-list-item class="btns-group__item">
+
+				<md-card class="btns-group__btn md-raised md-primary">
+					<md-card-title>
+						<md-card-title-text>
+							<span class="btns-group__name">{{task.task}}</span>
+						</md-card-title-text>
+					</md-card-title>
+				</md-card>
+
+			</md-list-item>
+
+		</md-list>
+
+		<md-button ng-click = "vm.addTask()" class="md-fab md-mini md-primary md-hue-2" >
+			<md-icon class="icons8-plus"></md-icon>
+		</md-button>
+
+	</div>
+
+
+
+
+    <md-sidenav md-theme="main" md-component-id='right' class="sidenav-right md-sidenav-right" layout="column">
+
+
+        <md-input-container ng-show="vm.navContent.project" class="create-project md-primary md-hue-2" flex="70">
+
+          <label class="create-project__label">Create New Project</label>
+          <input ng-model="vm.dash.project" class="create-project__input"  minlength="1">
+
+        </md-input-container>
+
+        <div ng-show="vm.navContent.task" flex="70">
+
+          <md-input-container  class="create-project md-primary md-hue-2" >
+
+            <input ng-model="vm.dash.task" class="create-project__input"  minlength="1">
+
+          </md-input-container>
+
+          <md-input-container  class="create-project md-primary md-hue-2" >
+
+            <input ng-model="vm.dash.desc" class="create-project__input"  minlength="1">
+
+          </md-input-container>
+        </div>
+
+        <md-button ng-click = "vm.addProject()" class="md-fab md-mini" >
+          <md-icon class="icons8-checkmark"></md-icon>
+        </md-button>
+
+        <div ng-click = "vm.closeRight()" class="sidenav-right__close">
+          <div class="sidenav-right__close-icon icons8-delete-2"></div>
+          <div>esc</div>
+        </div>
+
+        <!--<div ng-show="vm.navContent.project">project</div>-->
+
+
+    </md-sidenav>
+
+
