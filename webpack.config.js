@@ -10,7 +10,20 @@ module.exports = {
        { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
        { test: /\.html$/, loader: 'raw' },
        { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-       { test: /\.css$/, loader: 'style!css' }
+       { test: /\.css$/, loader: 'style!css' },
+      {
+        test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+        loader : 'file?name=assets/fonts/[name].[ext]?[hash]'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=8192&name=assets/images/[name].[hash].[ext]'
+      },
+        {
+            test: /\.styl$/,
+            loader: 'style!css!stylus',
+            exclude: /node_modules/
+        },
     ]
   },
   plugins: [

@@ -13,13 +13,12 @@ export default class DataService {
 
 
     getUser() {
-        return [
-            {
+        return {
                 "id": 123,
                 "name": "Trevor Reyes",
                 "ava": "assets/user.png"
             }
-        ]
+
     }
 
     getTasks() {

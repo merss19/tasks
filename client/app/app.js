@@ -5,8 +5,7 @@ import Components from './components/components'
 import AppComponent from './app.component'
 import services from './services/services'
 import ngMaterial from 'angular-material'
-import 'normalize.css'
-import '../../node_modules/angular-material/angular-material.css'
+
 
 angular.module('app', [
     'ngMaterial',

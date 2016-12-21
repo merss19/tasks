@@ -1,11 +1,13 @@
 import template from './sideLeft.html';
 import controller from './sideLeft.controller';
-import './sideLeft.scss';
+import './sideLeft.styl';
+//import '../../../assets/icon/styles.css'
 
 let sideLeftComponent = {
   restrict: 'E',
   bindings: {
       projects: '<',
+      user:'<',
       newProject: '&'
   },
   template,

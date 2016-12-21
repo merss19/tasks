@@ -23,6 +23,7 @@ class DashboardController {
       this.user = this.data.user
     this.projects = this.data.projects
       this.tasks = this.data.tasks
+      console.log(this.user)
 
 
     this.navContent = {
