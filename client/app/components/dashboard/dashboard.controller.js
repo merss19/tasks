@@ -6,24 +6,19 @@ class DashboardController {
     this.$mdSidenav = $mdSidenav
     this.$log = $log
       this.data = dataService
-      console.log('DashboardController')
-      console.log(this.data)
 
 
 
-    /*this.user = {
-      img:'src/assets/img/ava.jpg'
-    }*/
-    this.dash = {
-      project:"Project name",
-      task:"Task Name",
-      desc:"Description"
+    this.value = {
+      project:"",
+      task:"",
+      desc:""
     }
 
       this.user = this.data.user
-    this.projects = this.data.projects
-      this.tasks = this.data.tasks
-      console.log(this.user)
+    this.projects = []
+      this.tasks = []
+
 
 
     this.navContent = {
@@ -32,14 +27,32 @@ class DashboardController {
     }
 
     this.openRight = this.open('right')
-    this.closeRight = this.close('right')
+    this.closeSide = this.close('right')
     this.newProject = this.newProjectHandler
-    this.addProject = this.add
-    this.addTask = this.taskHandler
+    //this.addProject = this.add
   }
 
-    taskHandler(){
-        console.log('taskHandler')
+    $onInit(){
+        this.data.addTasks()
+        this.data.addProjects()
+        console.log('$onInit')
+        this.tasks = this.data.tasks
+        this.projects = this.data.projects
+        console.log(this.projects)
+    }
+
+    removeItem(id){
+        console.log('removeItem')
+        console.log(id)
+        this.data.remove(id)
+        this.tasks = this.data.tasks
+        //this.tasks = this.tasks.filter((task) => task.id !==id)
+        //this.tasks =[]
+        console.log(this.tasks)
+    }
+
+    addTask(){
+        console.log('taskHandlerrrrrrrrr')
         this.navContent = {
             project:false,
             task:true
@@ -62,39 +75,55 @@ class DashboardController {
     add(){
         console.log('add')
         if(this.navContent.project){
+            let id = '_' + Math.random().toString(36).substr(2,9)
 
-            if(this.dash.project.trim().length > 0){
+            if(this.value.project.trim().length > 0){
+
                 let newProject = {
-                    id:12,
-                    title:this.dash.project.trim(),
+                    id:id,
+                    title:this.value.project.trim(),
                     task_count:0
                 }
-                this.project.push(newProject)
-                console.log(this.project)
+
+
+                this.data.addProject(newProject)
+                this.value = {
+                    project:"",
+                    task:"",
+                    desc:""
+                }
             }
 
         }
 
         if(this.navContent.task){
 
-            if(this.dash.task.trim().length > 0){
+            if(this.value.task.trim().length > 0){
+                let id = '_' + Math.random().toString(36).substr(2,9)
                 let newTask = {
-                    id:12,
-                    task:this.dash.task.trim(),
-                    desc:this.dash.desc.trim()
+                    date:"Today",
+                    tasks:[
+                        {
+                            id:id,
+                            task:this.value.task.trim(),
+                            desc:this.value.desc.trim()
+                        }
+
+                    ]
+
                 }
 
-                this.tasks.push(newTask)
-                console.log(newTask)
+                this.data.addTask(newTask)
+                this.value = {
+                    project:"",
+                    task:"",
+                    desc:""
+                }
+
             }
 
         }
 
-
-        //let name = this.dash.project.trim()
-        return ()=>{
-            console.log(this.dash.project.trim())
-        }
 
     }
 

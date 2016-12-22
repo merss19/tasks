@@ -1,27 +1,27 @@
-<md-sidenav layout="column" md-theme="main" md-is-locked-open="true" class="side-left">
+<md-sidenav  md-theme="main" md-is-locked-open="true" class="side-left__nav">
 
-	<md-card class="side-left__user">
-		<md-card-header layout="row" layout-align="center center">
+	<md-card class="side-left__card">
+		<md-card-header layout="row" layout-align="center center" class="side-left__card-header">
 
-			<md-card-avatar class="sidenav__avatar">
-				<div>
+			<md-card-avatar class="side-left__card-avatar">
+				<div class="side-left__ava">
 					<img ng-src="{{vm.user.ava}}" class="md-user-avatar" alt="">
 				</div>
 			</md-card-avatar>
 
 			<md-card-header-text>
-				<span class="side-left__user md-title ">{{vm.user.name}}</span>
+				<span class="side-left__card-text md-title">{{vm.user.name}}</span>
 			</md-card-header-text>
 
 		</md-card-header>
 
 	</md-card>
 
-	<div class="md-primary" layout="row">
-		<span flex="75">Project</span>
+	<div class="side-left__add md-primary" layout="row" layout-align="start center">
+		<span class="side-left__add-text" flex="85">Projects</span>
 
-		<md-button ng-click="vm.newProject()" class="md-raised md-primary" flex="25">
-			<span class="btns-group__value icons8-plus"></span>
+		<md-button ng-click="vm.newProject()" class="side-left__add-btn md-raised md-primary" flex="15">
+			<span class="side-left__icon-plus icons8-plus"></span>
 		</md-button>
 
 		<!--<md-button class="md-icon-button" aria-label="Plus">
@@ -37,18 +37,25 @@
 
 
 
-	<md-list ng-repeat="project in vm.projects" class="side-left__list">
+	<md-list  class="side-left__list">
 
-		<md-list-item class="side-left__item">
+		<md-list-item ng-repeat="project in vm.projects" class="side-left__item">
 
-			<md-button class="side-left__btn md-raised md-primary">
-				<span class="btns-group__name">{{project.title}}</span>
-				<span class="btns-group__value">{{project.task_count}}</span>
+			<md-button class="side-left__btn md-raised md-primary" layout="row" >
+				<span class="side-left__btn-name" flex="85">{{project.title}}</span>
+				<span class="side-left__btn-value" flex="15">{{project.task_count}}</span>
 			</md-button>
 
 		</md-list-item>
 
 	</md-list>
+
+	<div class="side-left__logout">
+		<md-button class="side-left__btn md-raised md-primary" layout="row" >
+			Log out
+		</md-button>
+	</div>
+
 
 </md-sidenav>
 

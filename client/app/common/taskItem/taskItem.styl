@@ -1,0 +1,65 @@
+@import '../../../assets/styles/common'
+
+.task-item
+	width: 58.8%;
+	max-width: 58.8%;
+	margin: 0 auto
+
+	&__date
+		position: absolute
+		top: -13px;
+		left: 32px;
+		color: color-grey
+		font-family: SFSemibold
+		font-size: 15px
+		letter-spacing: 1px
+
+	&__delete
+		width: 14.2%;
+		padding: 8px 0;
+
+	&__card
+		padding:0 2px
+
+	&__checkbox
+		border-right: 1px solid #eaeaea
+		height:100%
+
+	&__title
+		font-size: 15px
+		font-family: SFSemibold
+		color: #212121
+		width:85.8%
+		font-weight: bold;
+		letter-spacing: 0.4px;
+		line-height: 15px;
+		padding-top: 19px
+
+	&__input
+		display: none
+
+	&__label
+		display: block
+		width: 20px
+		height: 20px
+		border: 3px solid #bdbdbd
+		border-radius 33px
+		cursor: pointer
+
+	&__box
+		position: relative
+		padding:5.5px 0
+
+		&:before
+			content: ''
+			display: block
+			background: #eaeaea
+			height: 1px
+			width: 81%;
+			position: absolute;
+			top: 0;
+			left: 58px
+
+		&:first-child
+			&:before
+				display: none

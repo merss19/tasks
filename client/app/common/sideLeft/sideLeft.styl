@@ -1,18 +1,77 @@
 @import '../../../assets/styles/common'
 
-.side-left {
+.side-left
+	&__nav
+		width:100%
 
-	&__user{
-		box-shadow: none;
-	}
+	&__card
+		box-shadow: none
 
-	&__btn{
-		width:100%;
+		&-header
+			padding-left:24px
+
+		&-text
+			&.md-title
+				font-family:SFSemibold
+				font-size:15px
+				padding-left: 14px
+				letter-spacing: 0.5px
+
+		&-avatar
+			width: 51.5px
+			height: 50px
+			margin: 0
+			
+	&__add
+		padding:0 30px
+		margin-top:7px
+
+		&-btn
+			&.md-button.md-raised:not([disabled])
+				box-shadow: none
+				min-width: 42px
+				margin:2px 0 0 0
+		&-text
+			color: #b3bbcb
+			font-family:SFSemibold
+			font-size: 11px
+			padding: 0 16px
+			letter-spacing: 1.2px
+
+	&__icon
+		&-plus
+			font-size:20px
+
+	&__list
+		padding:0 30px
+		margin-top: 3px
+
+	&__item
+		min-height:40px
+		height:40px
+
+	&__btn
+		width:100%
 		font-family: SFMedium
+		height:40px
 
-		&.md-button.md-raised:not([disabled]){
-			box-shadow: none;
-		}
-	}
+		&.md-button.md-raised:not([disabled])
+			box-shadow: none
+			text-transform: none
+			margin:0
+			font-family:SFSemibold
+			font-size:15px
+			letter-spacing:1px
+			padding: 3px 14px 3px 15px;
+			color: #fff
 
-}
+		&-name
+			text-align: left
+
+		&-value
+			text-align: right
+
+	&__logout
+		position: absolute
+		bottom 12px
+		padding: 0 30px

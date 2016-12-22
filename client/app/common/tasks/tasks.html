@@ -1,0 +1,31 @@
+
+	<md-input-container md-no-float class="tasks__top md-block" ng-class="{'icons8-search': vm.focusInput}">
+		<input ng-model="vm.search"  ng-focus="vm.focus()" ng-blur="vm.focus()" type="text" class="tasks__input" >
+
+		<md-button ng-click="" class="tasks__btn md-raised" >
+			<div class="tasks__btn-icon icons8-more"></div>
+		</md-button>
+
+	</md-input-container>
+
+	<div class="tasks__content" layout="row" >
+		<md-list  class="tasks__list" flex>
+
+			<task-item ng-repeat = "task in vm.tasks"
+				delete="vm.del({id})"
+				item="task"
+				layout="row"
+				class="tasks__item">
+
+			</task-item>
+
+
+
+		</md-list>
+
+	</div>
+
+
+	<md-button ng-click = "vm.addTask()" class="tasks__add md-fab md-primary md-hue-2" >
+	  <div class="icons8-plus"></div>
+	</md-button>

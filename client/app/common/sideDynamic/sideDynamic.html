@@ -1,0 +1,59 @@
+<md-sidenav md-theme="main"
+            md-component-id='right'
+            class="side-dynamic md-sidenav-right"
+            layout="row"
+            layout-align="center start"
+            lex="36">
+
+	<div ng-show="vm.content.project" class="side-dynamic__form" layout="column">
+
+		<div class="side-dynamic__title">Create new project</div>
+
+		<md-input-container ng-show="vm.content.project" class="side-dynamic__container md-primary md-hue-2" flex>
+
+			<input ng-model="vm.value.project"
+			       minlength="1"
+			       placeholder="Project name"
+			       class="side-dynamic__container-input">
+
+		</md-input-container>
+
+	</div>
+
+	<div ng-show="vm.content.task" class="side-dynamic__form" layout="column">
+
+		<div class="side-dynamic__title">Create new task</div>
+
+		<md-input-container class="side-dynamic__container md-primary md-hue-2" flex>
+
+			<input ng-model="vm.value.task"
+			       placeholder="Task name"
+			       class="side-dynamic__container-input"
+			       minlength="1">
+
+		</md-input-container>
+
+		<md-input-container class="side-dynamic__container md-hue-2" flex>
+
+			<input ng-model="vm.value.desc"
+			       placeholder="Description"
+			       class="side-dynamic__container-input"
+			       minlength="1">
+
+		</md-input-container>
+	</div>
+
+	<md-button ng-click="vm.add()" class="side-dynamic__add md-fab md-primary md-hue-2">
+		<div class="icons8-checkmark"></div>
+	</md-button>
+
+	<div ng-click="vm.close()" class="side-dynamic__close side-dynamic__close">
+		<div class="icons8-delete-2"></div>
+		<div class="side-dynamic__close-text">esc</div>
+	</div>
+
+	<!--<div ng-show="vm.navContent.project">project</div>-->
+
+
+</md-sidenav>
+

@@ -1,11 +1,14 @@
-import angular from 'angular';
-import Navbar from './navbar/navbar';
-
-import SideLeft from './sideLeft/sideLeft';
+import angular from 'angular'
+import Tasks from './tasks/tasks'
+import TasksItem from './taskItem/taskItem'
+import SideLeft from './sideLeft/sideLeft'
+import SideDynamic from './sideDynamic/sideDynamic'
 
 let commonModule = angular.module('app.common', [
-  Navbar,
-  SideLeft
+  SideLeft,
+  Tasks,
+    TasksItem,
+    SideDynamic
 ])
   
 .name;

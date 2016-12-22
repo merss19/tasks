@@ -7,8 +7,10 @@ export default class DataService {
         console.log('Data')
 
         this.user = this.getUser()
-        this.projects = this.getProjects()
-        this.tasks = this.getTasks()
+        this.projects = []
+        this.addTasks = this.addTasksHandler
+        this.addProjects = this.addProjectsHandler
+        this.tasks = []
     }
 
 
@@ -21,18 +23,52 @@ export default class DataService {
 
     }
 
+    addProjectsHandler(){
+        console.log('addTasksHandler')
+        this.projects = this.getProjects()
+
+    }
+
+    addTasksHandler(){
+        console.log('addTasksHandler')
+        this.tasks = this.getTasks()
+        console.log(this.tasks)
+    }
+
     getTasks() {
         return [
             {
-                "id": 123,
-                "task": "Create a company",
-                "desc": "Create a company"
+                "date":"Today",
+                "tasks": [
+                    {
+                        "id": 111,
+                        "task":"Create a company"
+                    }
+                ]
             },
             {
-                "id": 234,
-                "task": "Call in barber shop",
-                "desc": "Create a company"
+                "date":"Tomorrow",
+                "tasks": [
+                    {
+                        "id": 222,
+                        "task":"Call in barber shop"
+                    }
+                ]
+            },
+            {
+                "date":"Friday (09.06.2016)",
+                "tasks": [
+                    {
+                        "id": 33,
+                        "task":"Call in barber"
+                    },
+                    {
+                        "id": 44,
+                        "task":"Call in"
+                    }
+                ]
             }
+
         ]
     }
 
@@ -41,14 +77,44 @@ export default class DataService {
             {
                 "id": 123,
                 "title": "Private",
-                "task_count": 4
+                "task_count": 8
             },
             {
-                "id": 234,
+                "id": 236,
                 "title": "Decode",
-                "task_count": 9
+                "task_count": 25
+            },
+            {
+                "id": 235,
+                "title": "Family",
+                "task_count": 3
+            },
+            {
+                "id": 233,
+                "title": "Cookle",
+                "task_count": 13
             }
         ]
+    }
+
+    addTask(task){
+        this.tasks.push(task)
+    }
+
+    addProject(project){
+        this.projects.push(project)
+    }
+
+    remove(id){
+        this.tasks.forEach(function(item) {
+            item.tasks = item.tasks.filter((task) => task.id !==id)
+        })
+        this.tasks = this.tasks.filter((task) => task.tasks.length)
+
+       //this.tasks = this.tasks.filter((task) => task.id !==id)
+
+        console.log('remove')
+        console.log(this.tasks)
     }
 
  /* add(description) {
