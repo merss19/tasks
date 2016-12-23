@@ -14,7 +14,7 @@ export default class DataService {
         return {
             "id": 123,
             "name": "Trevor Reyes",
-            "ava": "assets/user.png"
+            "ava": "user.png"
         }
 
     }
