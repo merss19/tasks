@@ -35,10 +35,9 @@ class DashboardController {
 	$onInit() {
 		this.data.addTasks()
 		this.data.addProjects()
-		console.log('$onInit')
 		this.tasks = this.data.tasks
 		this.projects = this.data.projects
-		console.log(this.projects)
+
 	}
 
 	removeItem(id) {
