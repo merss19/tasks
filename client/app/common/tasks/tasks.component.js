@@ -7,6 +7,7 @@ let tasksComponent = {
   bindings: {
     tasks: '<',
     addTask: '&',
+      openTask:'&',
       del: '&'
   },
   template,

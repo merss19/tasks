@@ -9,9 +9,10 @@
 
 	<tasks tasks ="vm.tasks"
 			add-task = "vm.addTask()"
+           open-task = "vm.openTask()"
 			layout="column"
 			class="dashboard__tasks"
-			del = "vm.removeItem(id)">
+			del = "vm.removeItem(id)" flex>
 	</tasks>
 
 
@@ -19,6 +20,7 @@
 					content = "vm.navContent"
                   close ="vm.closeSide()"
 					add ="vm.add()"
+                  current = "vm.current"
                   layout="row">
 
 	</side-dynamic>

@@ -15,6 +15,8 @@ class DashboardController {
       desc:""
     }
 
+      this.current = {}
+
       this.user = this.data.user
     this.projects = []
       this.tasks = []
@@ -23,7 +25,8 @@ class DashboardController {
 
     this.navContent = {
       project:false,
-      task:false
+      task:false,
+        open:false
     }
 
     this.openRight = this.open('right')
@@ -31,6 +34,8 @@ class DashboardController {
     this.newProject = this.newProjectHandler
     //this.addProject = this.add
   }
+
+
 
     $onInit(){
         this.data.addTasks()
@@ -55,8 +60,26 @@ class DashboardController {
         console.log('taskHandlerrrrrrrrr')
         this.navContent = {
             project:false,
-            task:true
+            task:true,
+            open:false
         }
+        this.openRight()
+    }
+
+    openTask(){
+        console.log('openrrrrrrrr')
+        this.navContent = {
+            project:false,
+            task:false,
+            open:true
+        }
+
+        this.current = this.data.current
+        console.log('add')
+        console.log(this.current)
+
+
+
         this.openRight()
     }
 
@@ -65,7 +88,8 @@ class DashboardController {
         console.log(this.navContent)
         this.navContent = {
             project:true,
-            task:false
+            task:false,
+            open:false
         }
         this.openRight()
 

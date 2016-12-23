@@ -6,7 +6,8 @@ let taskItemComponent = {
   restrict: 'E',
   bindings: {
       item: '<',
-      delete: '&'
+      delete: '&',
+      openTask:'&'
   },
   template,
   controller,

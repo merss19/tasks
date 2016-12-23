@@ -3,7 +3,7 @@
 <md-list-item class="task-item">
 
 	<div class="task-item__date">{{vm.item.date}}</div>
-	<md-card class="task-item__card md-primary" layout="column" flex>
+	<md-card class="task-item__card md-primary"  layout="column" flex>
 
 		<div class="task-item__box" ng-repeat = "task in vm.item.tasks" layout="row" flex>
 			<div class="task-item__delete">
@@ -19,7 +19,7 @@
 
 			</div>
 
-			<md-card-title class="task-item__title">
+			<md-card-title class="task-item__title" ng-click = "vm.open(task)">
 				<md-card-title-text >
 					<span class="task-item__title-name">{{task.task}}</span>
 				</md-card-title-text>

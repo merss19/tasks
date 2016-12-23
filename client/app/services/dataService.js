@@ -11,6 +11,7 @@ export default class DataService {
         this.addTasks = this.addTasksHandler
         this.addProjects = this.addProjectsHandler
         this.tasks = []
+        this.current = {}
     }
 
 
@@ -35,6 +36,15 @@ export default class DataService {
         console.log(this.tasks)
     }
 
+    currentTaskSet(task){
+        console.log('currentTaskSet')
+        console.log(task)
+        this.current = task
+        console.log(this.current)
+    }
+
+
+
     getTasks() {
         return [
             {
@@ -42,7 +52,8 @@ export default class DataService {
                 "tasks": [
                     {
                         "id": 111,
-                        "task":"Create a company"
+                        "task":"Create a company",
+                        "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                     }
                 ]
             },
@@ -51,20 +62,23 @@ export default class DataService {
                 "tasks": [
                     {
                         "id": 222,
-                        "task":"Call in barber shop"
+                        "task":"Call in barber shop",
+                        "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     }
                 ]
             },
             {
-                "date":"Friday (09.06.2016)",
+                "date":"Friday",
                 "tasks": [
                     {
                         "id": 33,
-                        "task":"Call in barber"
+                        "task":"Call in barber",
+                        "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut..."
                     },
                     {
                         "id": 44,
-                        "task":"Call in"
+                        "task":"Call in",
+                        "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ..."
                     }
                 ]
             }

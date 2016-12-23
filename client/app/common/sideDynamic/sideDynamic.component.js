@@ -8,7 +8,8 @@ let sideDynamicComponent = {
         value: '<',
         content: '<',
         close: '&',
-        add: '&'
+        add: '&',
+        current:'='
     },
   template,
   controller,

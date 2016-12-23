@@ -9,7 +9,7 @@
 
 		<div class="side-dynamic__title">Create new project</div>
 
-		<md-input-container ng-show="vm.content.project" class="side-dynamic__container md-primary md-hue-2" flex>
+		<md-input-container ng-show="vm.content.project" class="side-dynamic__container md-primary md-hue-1" flex>
 
 			<input ng-model="vm.value.project"
 			       minlength="1"
@@ -24,7 +24,7 @@
 
 		<div class="side-dynamic__title">Create new task</div>
 
-		<md-input-container class="side-dynamic__container md-primary md-hue-2" flex>
+		<md-input-container class="side-dynamic__container md-primary md-hue-1" flex>
 
 			<input ng-model="vm.value.task"
 			       placeholder="Task name"
@@ -33,7 +33,7 @@
 
 		</md-input-container>
 
-		<md-input-container class="side-dynamic__container md-hue-2" flex>
+		<md-input-container class="side-dynamic__container md-hue-1" flex>
 
 			<input ng-model="vm.value.desc"
 			       placeholder="Description"
@@ -43,16 +43,45 @@
 		</md-input-container>
 	</div>
 
-	<md-button ng-click="vm.add()" class="side-dynamic__add md-fab md-primary md-hue-2">
+	<div ng-show="vm.content.open" class="side-dynamic__form side-dynamic__form_type_text" layout="column">
+
+		<div class="side-dynamic__title">{{vm.current.task}}</div>
+
+		<md-input-container class="side-dynamic__container side-dynamic__container_type_text md-primary md-hue-2" flex>
+
+			<textarea  ng-model="vm.current.desc"
+			           class="side-dynamic__text"
+			           rows="5"
+			           aria-label="Description"
+			           md-select-on-focus>
+			</textarea>
+
+		</md-input-container>
+
+
+	</div>
+
+	<md-button ng-click="vm.add()"
+	           ng-hide="vm.content.open"
+	           class="side-dynamic__add md-fab md-primary md-hue-2" aria-label="Add">
+
 		<div class="icons8-checkmark"></div>
+
 	</md-button>
 
-	<div ng-click="vm.close()" class="side-dynamic__close side-dynamic__close">
+	<div ng-click="vm.close()" class="side-dynamic__close">
 		<div class="icons8-delete-2"></div>
 		<div class="side-dynamic__close-text">esc</div>
 	</div>
 
-	<!--<div ng-show="vm.navContent.project">project</div>-->
+	<div class="side-dynamic__btns" ng-show="vm.content.open">
+
+		<div class="side-dynamic__btns-item icons8-edit"></div>
+		<div class="side-dynamic__btns-item icons8-delete"></div>
+
+	</div>
+
+
 
 
 </md-sidenav>

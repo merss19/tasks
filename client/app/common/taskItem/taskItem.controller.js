@@ -17,9 +17,14 @@ class TaskItemController {
       console.log(this.deleteBox)
 
         this.delete({id:id})
-
-
   }
+
+    open(task){
+        console.log('open-taskitem')
+        console.log(task)
+        this.data.currentTaskSet(task)
+        this.openTask()
+    }
 
 }
 

@@ -7,6 +7,11 @@
 	&__container
 		margin: -3px 0
 
+		&_type
+			&_text
+				margin-top: -4px;
+				margin-left: -6px;
+
 		label
 			letter-spacing: 0.6px;
 			padding: 5px 0 5px 7px;
@@ -20,9 +25,25 @@
 			font-size: 15px
 			color: #fff
 
+
 	&__form
 		padding-top:30px
 		width:68%
+
+		md-input-container.md-main-theme.md-hue-1
+			label
+				color: #fff
+			.md-input
+				border-color: #fff
+
+		&_type
+			&_text
+				md-input-container 
+					.md-input
+						line-height:23px
+					
+					&.md-main-theme.md-hue-2 .md-input
+						border-color: transparent
 
 	&__title
 		color: #fff
@@ -58,3 +79,23 @@
 
 		.icons8-checkmark
 			font-size: 24px
+			
+	&__text
+		font-size: 12px
+		color: #fff
+		line-height: 23px
+		letter-spacing: 0.1px;
+		word-spacing: 0.4px;
+		font-family:SFRegular
+
+	&__btns
+		position: absolute
+		right: 21px;
+		top: 29px;
+
+		&-item
+			color: #51555e
+			font-size: 20px
+			cursor: pointer
+			display: inline-block
+			padding: 0 7px
