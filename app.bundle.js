@@ -854,10 +854,8 @@ webpackJsonp([0],{
 			value: function $onInit() {
 				this.data.addTasks();
 				this.data.addProjects();
-				console.log('$onInit');
 				this.tasks = this.data.tasks;
 				this.projects = this.data.projects;
-				console.log(this.projects);
 			}
 		}, {
 			key: "removeItem",
@@ -1305,7 +1303,7 @@ webpackJsonp([0],{
 	            return {
 	                "id": 123,
 	                "name": "Trevor Reyes",
-	                "ava": "assets/user.png"
+	                "ava": "user.png"
 	            };
 	        }
 	    }, {
