@@ -11,7 +11,7 @@ config.output = {
 config.plugins = config.plugins.concat([
 
   // Reduces bundles total size
-  new webpack.optimize.UglifyJsPlugin({
+/*  new webpack.optimize.UglifyJsPlugin({
     mangle: {
 
       // You can specify all variables that should not be mangled.
@@ -20,7 +20,7 @@ config.plugins = config.plugins.concat([
       // angular global variable, so we should keep it unchanged
       except: ['$super', '$', 'exports', 'require', 'angular']
     }
-  })
+  })*/
 ]);
 
 module.exports = config;
