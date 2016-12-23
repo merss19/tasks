@@ -1,7 +1,7 @@
 class SideDynamicController {
-  constructor() {
-    this.name = 'sideDynamic';
-  }
+	constructor() {
+		this.name = 'sideDynamic';
+	}
 }
 
 export default SideDynamicController;

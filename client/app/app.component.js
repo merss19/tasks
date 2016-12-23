@@ -5,8 +5,8 @@ import '../../node_modules/angular-material/angular-material.css'
 import './app.styl'
 
 let appComponent = {
-  template,
-  restrict: 'E'
+	template,
+	restrict: 'E'
 };
 
 export default appComponent;

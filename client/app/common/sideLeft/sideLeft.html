@@ -1,6 +1,7 @@
 <md-sidenav  md-theme="main" md-is-locked-open="true" class="side-left__nav">
 
 	<md-card class="side-left__card">
+
 		<md-card-header layout="row" layout-align="center center" class="side-left__card-header">
 
 			<md-card-avatar class="side-left__card-avatar">
@@ -18,9 +19,14 @@
 	</md-card>
 
 	<div class="side-left__add md-primary" layout="row" layout-align="start center">
+
 		<span class="side-left__add-text" flex="85">Projects</span>
 
-		<md-button ng-click="vm.newProject()" class="side-left__add-btn md-raised md-primary" aria-label="Add Project" flex="15">
+		<md-button ng-click="vm.newProject()"
+		           class="side-left__add-btn md-raised md-primary"
+		           aria-label="Add Project"
+		           flex="15">
+
 			<span class="side-left__icon-plus icons8-plus"></span>
 		</md-button>
 

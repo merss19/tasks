@@ -1,5 +1,8 @@
 
-	<md-input-container md-no-float class="tasks__top md-block" ng-class="{'icons8-search': vm.focusInput}">
+	<md-input-container md-no-float
+	                    class="tasks__top md-block"
+	                    ng-class="{'icons8-search': vm.focusInput}">
+
 		<input ng-model="vm.search"
 		       ng-focus="vm.focus()"
 		       ng-blur="vm.focus()"
@@ -9,21 +12,24 @@
 
 		<md-menu>
 
-			<md-button ng-click="$mdOpenMenu()" class="tasks__btn md-raised" aria-label="Edit Project">
+			<md-button ng-click="$mdOpenMenu()"
+			           class="tasks__btn md-raised"
+			           aria-label="Edit Project">
+
 				<div class="tasks__btn-icon icons8-more"></div>
+
 			</md-button>
 
 			<md-menu-content>
+
 				<md-menu-item>
-					<md-button >
-						Edit
-					</md-button>
+					<md-button >Edit</md-button>
 				</md-menu-item>
+
 				<md-menu-item>
-					<md-button >
-						Remove
-					</md-button>
+					<md-button >Remove</md-button>
 				</md-menu-item>
+
 			</md-menu-content>
 
 		</md-menu>
@@ -31,24 +37,27 @@
 	</md-input-container>
 
 	<div class="tasks__content" layout="row" >
+
 		<md-list  class="tasks__list" flex>
 
 			<task-item ng-repeat = "task in vm.tasks"
 				delete="vm.del({id})"
-			       open-task = "vm.openTask()"
+				open-task = "vm.openTask()"
 				item="task"
 				layout="row"
 				class="tasks__item">
-
 			</task-item>
-
-
 
 		</md-list>
 
 	</div>
 
-	<div ng-hide="vm.tasks.length" class="tasks__no-match" layout="column" layout-align="center center" flex>
+	<div ng-hide="vm.tasks.length"
+	     class="tasks__no-match"
+	     layout="column"
+	     layout-align="center center"
+	     flex>
+
 		<div class="tasks__no-match-wrapper">
 			<div class="icons8-todo-list"></div>
 			<div class="tasks__no-match-text">Have a good day</div>
@@ -57,6 +66,10 @@
 	</div>
 
 
-	<md-button ng-click = "vm.addTask()" class="tasks__add md-fab md-primary md-hue-2" aria-label="Add Task">
+	<md-button ng-click = "vm.addTask()"
+	           class="tasks__add md-fab md-primary md-hue-2"
+	           aria-label="Add Task">
+
 	  <div class="icons8-plus"></div>
+
 	</md-button>

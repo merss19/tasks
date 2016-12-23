@@ -1,7 +1,7 @@
 class SideLeftController {
-  constructor() {
-    this.name = 'sideLeft';
-  }
+	constructor() {
+		this.name = 'sideLeft';
+	}
 }
 
 export default SideLeftController;

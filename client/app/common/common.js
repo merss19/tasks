@@ -5,12 +5,12 @@ import SideLeft from './sideLeft/sideLeft'
 import SideDynamic from './sideDynamic/sideDynamic'
 
 let commonModule = angular.module('app.common', [
-  SideLeft,
-  Tasks,
-    TasksItem,
-    SideDynamic
+	SideLeft,
+	Tasks,
+	TasksItem,
+	SideDynamic
 ])
-  
-.name;
+
+	.name;
 
 export default commonModule;

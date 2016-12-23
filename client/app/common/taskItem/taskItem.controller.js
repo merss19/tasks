@@ -1,30 +1,20 @@
 class TaskItemController {
-  constructor(dataService) {
-    "ngInject";
+	constructor(dataService) {
+		"ngInject";
 
-    this.name = 'taskItemddd';
-    this.deleteBox = false
-      console.log('this.tasks')
-    console.log(this.tasks)
-      this.data = dataService
+		this.name = 'taskItemddd';
+		this.deleteBox = false
+		this.data = dataService
+	}
 
+	remove(id) {
+		this.delete({id: id})
+	}
 
-
-  }
-  remove(id){
-    console.log('deleteHandlerfrfgggg')
-    console.log(id)
-      console.log(this.deleteBox)
-
-        this.delete({id:id})
-  }
-
-    open(task){
-        console.log('open-taskitem')
-        console.log(task)
-        this.data.currentTaskSet(task)
-        this.openTask()
-    }
+	open(task) {
+		this.data.currentTaskSet(task)
+		this.openTask()
+	}
 
 }
 

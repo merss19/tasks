@@ -2,12 +2,10 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import taskItemComponent from './taskItem.component';
 
-let taskItemModule = angular.module('taskItem', [
+let taskItemModule = angular.module('taskItem', [])
 
-])
+	.component('taskItem', taskItemComponent)
 
-.component('taskItem', taskItemComponent)
-
-.name;
+	.name;
 
 export default taskItemModule;

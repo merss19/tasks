@@ -9,7 +9,9 @@
 
 		<div class="side-dynamic__title">Create new project</div>
 
-		<md-input-container ng-show="vm.content.project" class="side-dynamic__container md-primary md-hue-1" flex>
+		<md-input-container ng-show="vm.content.project"
+		                    class="side-dynamic__container md-primary md-hue-1"
+		                    flex>
 
 			<input ng-model="vm.value.project"
 			       minlength="1"
@@ -41,19 +43,22 @@
 			       minlength="1">
 
 		</md-input-container>
+
 	</div>
 
-	<div ng-show="vm.content.open" class="side-dynamic__form side-dynamic__form_type_text" layout="column">
+	<div ng-show="vm.content.open"
+	     class="side-dynamic__form side-dynamic__form_type_text"
+	     layout="column">
 
 		<div class="side-dynamic__title">{{vm.current.task}}</div>
 
 		<md-input-container class="side-dynamic__container side-dynamic__container_type_text md-primary md-hue-2" flex>
 
-			<textarea  ng-model="vm.current.desc"
-			           class="side-dynamic__text"
-			           rows="5"
-			           aria-label="Description"
-			           md-select-on-focus>
+			<textarea ng-model="vm.current.desc"
+			          class="side-dynamic__text"
+			          rows="5"
+			          aria-label="Description"
+			          md-select-on-focus>
 			</textarea>
 
 		</md-input-container>
@@ -80,8 +85,6 @@
 		<div class="side-dynamic__btns-item icons8-delete"></div>
 
 	</div>
-
-
 
 
 </md-sidenav>

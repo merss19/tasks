@@ -1,12 +1,10 @@
 import angular from 'angular';
 import sideDynamicComponent from './sideDynamic.component';
 
-let sideDynamicModule = angular.module('sideDynamic', [
+let sideDynamicModule = angular.module('sideDynamic', [])
 
-])
+	.component('sideDynamic', sideDynamicComponent)
 
-.component('sideDynamic', sideDynamicComponent)
-
-.name;
+	.name;
 
 export default sideDynamicModule;
